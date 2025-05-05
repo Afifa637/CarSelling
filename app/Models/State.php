@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class FuelType extends Model
+class State extends Model
 {
     use HasFactory;
 
@@ -18,5 +18,10 @@ class FuelType extends Model
     public function cars()
     {
         return $this->hasMany(Car::class);
+    }
+
+    public function cities()
+    {
+        return $this->hasMany(City::class);
     }
 }
